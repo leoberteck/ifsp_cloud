@@ -33,6 +33,9 @@ jspm_packages
 # Optional npm cache directory
 .npm
 
+#uploads directory
+uploads
+
 # Optional REPL history
 <<<<<<< HEAD
 .node_repl_history
