@@ -1,0 +1,21 @@
+doctype html
+html
+  head
+    link(rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous")
+    link(rel="stylesheet" type="text/css" href="https://github.com/FortAwesome/Font-Awesome/blob/master/css/font-awesome.min.css")
+    script(src="https://code.jquery.com/jquery-3.1.0.min.js")
+    style
+      include style.css
+      include form.js
+      
+    title If Conecta
+  body
+    .conteiner-fluid
+      
+        form(action="/form" method="post" enctype="multipart/form-data")
+          .form-group
+              legend.Header O resultado foi...
+              br
+              div.divContainerResult
+                h3 #{locals.result}
+  

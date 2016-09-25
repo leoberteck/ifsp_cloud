@@ -10,6 +10,7 @@ var upload = multer({dest: 'uploads/'})
 var app = express()
 app.set('views', path.join(__dirname, 'views'))
 app.set('view engine', 'pug')
+app.use(express.static(path.join(__dirname, 'public')))
 app.use(bodyParser.json())
 app.use(bodyParser.urlencoded({extended : false}))
 
@@ -31,7 +32,8 @@ app.post("/form", upload.single('code'), function(req, res, next){
           exec("./" + o_name, { timeout : 3000 },  function (error_2, stdout_2, stder_2){
             if(handleOutput(res, error_2, stder_2))
             {
-              res.status(200).send(stdout_2)
+              //res.status(200).send(stdout_2)
+              res.render("result",{result:stdout_2})
             }
             fs.unlinkSync(o_name);
             fs.unlinkSync(i_name);
@@ -46,9 +48,7 @@ app.post("/form", upload.single('code'), function(req, res, next){
 
 function handleOutput(res, error, stder) {
   if(error || stder){
-    res.status(400).send(
-      "Output error:\n" + stder + "\n" +
-      "Error:\n" + error + "\n")
+    res.render("result",{result:"Output error:\n" + stder + "\n" + "Error:\n" + error + "\n"})
     return false;
   }else{
     return true;

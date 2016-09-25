@@ -1,26 +1,28 @@
 .Header{
-  color:blue;
+  color:black;
   text-align: center;
-  font-size: 40px;
+  font-size: 60px;
 }
 
 .Legenda{
-  color:black;
-  text-align: justify;;
-  font-size: 20px;
+  padding: 6px 6px;
+  cursor: pointer;
+  list-style: none;
+  list-style-type: none;
+
 }
 
 .btnSelect{
+    border-radius: 8px;
     background-color: #4CAF50;
     border: none;
     color: white;
-    padding: 15px 32px;
-    text-align: center;
+    padding: 15px 30px;
+    text-align: right;
     text-decoration: none;
     display: inline-block;
     font-size: 20px;
-    border-radius: 8px;
-    width: 175px;
+    width: 420px;
 }
 
 .btnUpload{
@@ -33,10 +35,46 @@
     text-decoration: none;
     display: inline-block;
     font-size: 20px;
-    width: 175px;
+    width: 420px;
 }
 
 .divContainer{
-  width: 90%
+  width: 35%;
   margin: 0 auto;
+  background-color: black;
+  border-radius: 20px;
+  width: 500px;
+  height: 370px;
+  text-align: center;
+  padding-top: 10px;
+}
+
+.divContainerResult{
+  width: 30%;
+  margin: 0 auto;
+  background-color: black;
+  border-radius: 20px;
+  width: 500px;
+  height: 370px;
+  text-align: center;
+  padding-top: 10px;
+}
+
+
+h3{
+  color:white;
+}
+
+.legendas{
+  text-align: center;
+  color: white;
+}
+
+.botoes{
+  width: 85%;
+  margin: 0 auto;
+}
+
+body{
+  background-color: #e6f3ff;
 }
